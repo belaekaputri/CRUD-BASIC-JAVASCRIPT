@@ -12,8 +12,8 @@ function view(){
 //save
 const simpan=document.getElementById("simpan"); //id dari button save
 simpan.addEventListener("click",function(){
-    let input=document.getElementById("entry").value;  //id dari (input type= text) dan ambil valuenya
-    data.push(input); //masukkan kedalam array data
+    let input=document.getElementById("entry");  //id dari (input type= text) dan ambil valuenya
+    data.push(input.value); //masukkan kedalam array data
     input.value="";
     view();  
 });
