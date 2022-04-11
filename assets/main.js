@@ -29,7 +29,11 @@ function hapus(id){
 //edit
 function edit(id){
     let dt=prompt("Edit Nama Buku",data[id]);
-    data[id]=dt;
+    if (!dt) {
+     id=data[id];
+    }else{
+        data[id]=dt;
+    }
     view();
 }
 view();
