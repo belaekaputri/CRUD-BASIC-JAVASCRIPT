@@ -1,7 +1,7 @@
-let data=["I Want Die But I Want To Eat Tteokbokki","Filosofi Teras","Mindset"];
+let data=["I Want Die But I Want To Eat Tteokbokki","Filosofi Teras","Mindset"]; //data array default
 function view(){
     let tabel=document.getElementById("tabel");
-    tabel.innerHTML="<tr> <th>No</th> <th>Nama Buku</th> <th>Aksi</th> </tr>";
+    tabel.innerHTML="<tr> <th>No</th> <th>Judul Buku</th> <th>Aksi</th> </tr>";
     for(let i=0; i<data.length;i++){
         let edit="<button class ='btn btn-outline-dark' href='#' onclick='edit(" + i + ")'>Edit</button>"
         let hapus="<button class ='btn btn-outline-dark' href='#' onclick='hapus(" + i + ")'>Hapus</button>"
