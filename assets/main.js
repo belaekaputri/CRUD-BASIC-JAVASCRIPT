@@ -1,19 +1,19 @@
 let data=["I Want Die But I Want To Eat Tteokbokki","Filosofi Teras","Mindset"]; //data array default
 function view(){
     let tabel=document.getElementById("tabel");
-    tabel.innerHTML="<tr> <th>No</th> <th>Judul Buku</th> <th>Aksi</th> </tr>";
+    tabel.innerHTML="<tr> <th>No</th> <th>Judul Buku</th> <th>Aksi</th> </tr>";//menampilkan judul tabel
     for(let i=0; i<data.length;i++){
         let edit="<button class ='btn btn-outline-dark' href='#' onclick='edit(" + i + ")'>Edit</button>"
         let hapus="<button class ='btn btn-outline-dark' href='#' onclick='hapus(" + i + ")'>Hapus</button>"
-       j=i+1;
-       tabel.innerHTML +=`<tr> <td>${j}</td> <td>${data[i]}</td> <td>${edit} ${hapus}</td>`; 
+       j=i+1; //untuk no
+       tabel.innerHTML +=`<tr> <td>${j}</td> <td>${data[i]}</td> <td>${edit} ${hapus}</td>`; //pengisian data
     }
 }
 //save
-const simpan=document.getElementById("simpan");
+const simpan=document.getElementById("simpan"); //id dari button save
 simpan.addEventListener("click",function(){
-    let input=document.getElementById("entry");
-    data.push(input.value);
+    let input=document.getElementById("entry").value;  //id dari (input type= text) dan ambil valuenya
+    data.push(input); //masukkan kedalam array data
     input.value="";
     view();  
 });
