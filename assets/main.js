@@ -1,4 +1,4 @@
-let data=["I Want Die But I Want To Eat Tteokbokki","Filosofi Teras","Mindset"]; //data array default
+let data=[]; // variabel data untuk menyimpan (array)
 function view(){
     let tabel=document.getElementById("tabel");
     tabel.innerHTML="<tr> <th>No</th> <th>Judul Buku</th> <th>Aksi</th> </tr>";//menampilkan judul tabel
