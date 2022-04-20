@@ -11,11 +11,16 @@ function view(){
 }
 //save
 const simpan=document.getElementById("simpan"); // dari button save
+let input=document.getElementById("entry");//id dari (input type= text) 
 simpan.addEventListener("click",function(){
-    let input=document.getElementById("entry");  //id dari (input type= text) 
-    data.push(input.value); //ambil value input masukkan kedalam array data
+    if (input.value === "") {
+       input.classList.add('is-invalid');
+    }else{
+    data.push(input.value);
+    input.classList.remove('is-invalid');
+    }
     input.value="";
-    view();  
+    view();   
 });
 
 
