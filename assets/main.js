@@ -9,18 +9,22 @@ function view(){
        tabel.innerHTML +=`<tr> <td>${j}</td> <td>${data[i]}</td> <td>${edit} ${hapus}</td>`; //pengisian data
     }
 }
+
+
 //save
 const simpan=document.getElementById("simpan"); // dari button save
 let input=document.getElementById("entry");//id dari (input type= text) 
 simpan.addEventListener("click",function(){
     if (input.value === "") {
        input.classList.add('is-invalid');
+       console.log("mohon maaf input judul buku tidak boleh kosong :D");
     }else{
     data.push(input.value);
     input.classList.remove('is-invalid');
+    $('#entryform').modal('hide'); //jquery entryform (ID dari modal) 
     }
     input.value="";
-    view();   
+    view();  
 });
 
 
